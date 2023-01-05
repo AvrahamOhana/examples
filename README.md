@@ -5,6 +5,7 @@ seeker analysis: the program simulates the behavior of a seeker with errors:
 scale factor
 bias
 noise
+![](https://github.com/C4dynamics/examples/blob/main/error%20analysis.gif)
 
 proportional_navigation: the program demonstrates the development of proportional navigation algorithm to pursuit a constant-speed target. 
 ![](https://github.com/C4dynamics/missile_guidance/blob/main/simple_pn.gif)
