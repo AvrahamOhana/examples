@@ -1,4 +1,3 @@
-# this quickstart file is a missile-target pursit built with the C4dynamics framework
 
 import numpy as np
 from importlib import reload
@@ -31,7 +30,7 @@ Ncmd = 3
 
 tgt = c4d.datapoint(x = rng0)
 msl = c4d.datapoint()
-skr = c4d.seekers.radar(nstd = 0 * c4d.cnvrt.d2r)
+skr = c4d.seekers.radar(nstd = 0 * c4d.params.d2r)
 pn  = c4d.path_planning.proportional_navigation(Ncmd, ts)
 # tgt.x = rng0
 # callable = an object that can be called.
@@ -190,11 +189,13 @@ plt.title('Trajectories')
 
 # omega 
 plt.figure()
-plt.plot(w_data[1:, 0], w_data[1:, 1] * c4d.cnvrt.r2d, 'k', linewidth = 2)
-plt.plot(w_data[1:, 0], w_data[1:, 2] * c4d.cnvrt.r2d, 'r', linewidth = 1)
+plt.plot(w_data[1:, 0], w_data[1:, 1] * c4d.params.r2d, 'k', linewidth = 2)
+plt.plot(w_data[1:, 0], w_data[1:, 2] * c4d.params.r2d, 'r', linewidth = 1)
 plt.title('omega')
-plt.legend('true', 'measure')
+ax = plt.gca()
+ax.legend(['true', 'measure'])
 # print(time.time() - tic)
+
 plt.show() 
 #   plt.close()
 #   plt.close('all')
