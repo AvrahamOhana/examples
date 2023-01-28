@@ -6,7 +6,7 @@ from scipy.integrate import solve_ivp # odeint,
 
 import sys, os
 dirname = os.path.dirname(__file__)
-sys.path.append(dirname + '\\..')
+sys.path.append(os.path.join(os.getcwd(), '..'))
 
 
 import C4dynamics as c4d

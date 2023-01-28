@@ -4,7 +4,7 @@ from builtins import object
 
 import os, sys
 os.getcwd()
-sys.path.append(os.getcwd() + '\\..')
+sys.path.append(os.path.join(os.getcwd(), '..'))
 
 import C4dynamics as c4d
 
